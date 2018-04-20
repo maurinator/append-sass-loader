@@ -1,0 +1,9 @@
+{
+  "name": "prepend-sass-loader",
+  "version": "1.0.0",
+  "description": "Import sass dependencies via webpack loader + query param (src)",
+  "main": "loader.js",
+  "scripts": {},
+  "author": "Mauricio Amezcua",
+  "license": "MIT"
+}
