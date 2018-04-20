@@ -1,6 +1,5 @@
-import querystring from 'querystring';
-
-export const loader = (source = '', options = {}, meta) => {
+const querystring = require('querystring');
+const loader = function (source = '', options = {}, meta) {
   const query = this.query;
   if (!query.length || typeof query == 'object') return source;
   const parsedQuery = querystring.parse(query.substring(1));
@@ -11,4 +10,5 @@ export const loader = (source = '', options = {}, meta) => {
     (a, c) => `@import "${c}";\n${a}`,
     source
   );
-}
+};
+module.exports = loader;
